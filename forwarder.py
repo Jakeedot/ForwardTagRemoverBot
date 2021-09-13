@@ -17,7 +17,7 @@ app = Client(
 app.start()
 print("Bot Started!")
 
-@app.on_message(filters.command(["start", "help", "about", "yardım", "h", "y"]))
+@app.on_message(filters.command(["start", "help", "about", "yardım", "h", "y"]), group=1)
 async def helps(client, message: Message):
 	tumad = message.from_user.first_name
 	if message.from_user.last_name != None:
@@ -50,7 +50,7 @@ async def helps(client, message: Message):
 		parse_mode="md"
 		)
 
-@app.on_message(filters.all, group=2)
+@app.on_message(filters.all, group=1)
 async def forward(client, message):
     await message.copy(chat_id=message.from_user.id)
 	
