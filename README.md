@@ -1,6 +1,6 @@
-# AutoGroupPrivateChatFilesStoreBot - Anonymous Forwarder
+# AnonymousMessageForwarderBot - Anonymous Forwarder
 
-## AutoGroupPrivateChatFilesStoreBot:
+## AnonymousMessageForwarderBot:
 
 🇹🇷 Ben basit bir yönlendirici botuyum.
 Gönderdiğiniz her mesajı anonimleştiririm.
