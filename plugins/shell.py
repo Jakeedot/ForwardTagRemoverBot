@@ -9,6 +9,7 @@ LOGGER = logging.getLogger(__name__)
 
 @Client.on_message(filters.command(Config.SHELL_COMMAND))
 async def shell(client, message):
+    if message.text in Config.HELP_COMMANDS: return
     if Config.OWNER_ID != 0 and message.from_user.id == Config.OWNER_ID:
         try:
             cmd = message.text.split(' ', 1)
