@@ -15,7 +15,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 LOGGER = logging.getLogger(__name__)
 
 
-@Client.on_message(filters.command(["start", "help", "about", "yardım", "h", "y"]))
+@Client.on_message(filters.command(Config.HELP_COMMANDS), group=2)
 async def helps(client, message: Message):
 	# return
 	if not await AuthUserCheck(message.chat.id, message.from_user.id): return
