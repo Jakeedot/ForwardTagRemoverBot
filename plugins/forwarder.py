@@ -17,6 +17,6 @@ LOGGER = logging.getLogger(__name__)
 async def forward(client, message):
 	if not await AuthUserCheck(message.chat.id, message.from_user.id): return
 	if await ForceSub(client, message) == 400: return
-	if await message.text in Config.HELP_COMMANDS: return
+	if message.text in Config.HELP_COMMANDS: return
 	await copyMessage(message)
 	

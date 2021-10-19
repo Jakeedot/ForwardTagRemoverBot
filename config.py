@@ -14,6 +14,7 @@ class Config(object):
     BOT_USERNAME = os.environ.get('BOT_USERNAME','')
     if not BOT_USERNAME.startswith('@'): BOT_USERNAME = '@' + BOT_USERNAME # bu satıra dokunmayın.
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "HuzunluArtemis")
+    CHANNEL_OR_CONTACT = os.environ.get("CHANNEL_OR_CONTACT", "HuzunluArtemis")
     OWNER_ID = int(os.environ.get('OWNER_ID', 0)) # give your owner id # if given 0 shell will not works
     AUTH_IDS = [int(x) for x in os.environ.get("AUTH_IDS", "0").split()] # if open to everyone give 0
     # forcesub vars
