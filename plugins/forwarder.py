@@ -15,7 +15,7 @@ LOGGER = logging.getLogger(__name__)
 
 @Client.on_message(filters.all, group=1)
 async def forward(client, message):
-	mesajText = "message.text"
+	mesajText = message.text
 	if not await AuthUserCheck(message.chat.id, message.from_user.id): return
 	if await ForceSub(client, message) == 400: return
 	if mesajText in Config.HELP_COMMANDS: return
