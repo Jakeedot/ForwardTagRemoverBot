@@ -13,12 +13,10 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 LOGGER = logging.getLogger(__name__)
 
 
-@Client.on_message(filters.all, group=1)
+@Client.on_message(filters.all & ~filters.command(Config.ALL_COMMANDS), group=2)
 async def forward(client, message):
-	mesajText = message.text
+	
 	if not await AuthUserCheck(message.chat.id, message.from_user.id): return
 	if await ForceSub(client, message) == 400: return
-	if mesajText in Config.HELP_COMMANDS: return
-	if mesajText.startswith(tuple(Config.SHELL_COMMAND)): return
-	await copyMessage(message)
+	await copyMessage(message, None, Config.SEND_AS_REPLY)
 	

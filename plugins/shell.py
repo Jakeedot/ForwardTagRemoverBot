@@ -1,3 +1,5 @@
+# HuzunluArtemis
+
 from pyrogram import Client, filters
 from config import Config
 import subprocess
@@ -7,7 +9,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
     level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
-@Client.on_message(filters.command(Config.SHELL_COMMAND))
+@Client.on_message(filters.command(Config.SHELL_COMMAND), group=1)
 async def shell(client, message):
     if Config.OWNER_ID != 0 and message.from_user.id == Config.OWNER_ID:
         try:

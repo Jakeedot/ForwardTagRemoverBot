@@ -1,3 +1,5 @@
+# HuzunluArtemis
+
 import asyncio
 from pyrogram.errors.exceptions.bad_request_400 import MessageNotModified
 from pyrogram.types import Message
@@ -18,6 +20,7 @@ async def sendMessage(toReplyMessage: Message, replyText: str, replyButtons:Inli
             reply_markup = replyButtons)
     except FloodWait as e:
         await asyncio.sleep(e.x)
+        LOGGER.info(str(e))
         await sendMessage(toReplyMessage)
     except Exception as e:
         LOGGER.info(str(e))
@@ -30,17 +33,34 @@ async def editMessage(toEditMessage: Message, editText: str, replyButtons:Inline
             reply_markup = replyButtons)
     except FloodWait as e:
         await asyncio.sleep(e.x)
+        LOGGER.info(str(e))
         await editMessage(toEditMessage)
     except MessageNotModified as e:
         LOGGER.info(str(e))
     except Exception as e:
         LOGGER.info(str(e))
 
-async def copyMessage(toReplyDocument: Message):
+async def copyMessage(toReplyDocument: Message, toCopyChatId: int = None, sendAsReply: bool = False):
+    if toCopyChatId is None: toCopyChatId = toReplyDocument.chat.id
     try:
-        return await toReplyDocument.copy(chat_id=toReplyDocument.from_user.id)
+        if sendAsReply:
+            return await toReplyDocument.copy(chat_id=toCopyChatId,
+                reply_to_message_id=toReplyDocument.message_id)
+        else:
+            return await toReplyDocument.copy(chat_id=toCopyChatId)
     except FloodWait as e:
         await asyncio.sleep(e.x)
+        LOGGER.info(str(e))
         await copyMessage(toReplyDocument)
+    except Exception as e:
+        LOGGER.info(str(e))
+
+async def sendDocument(toReplyDocument: Message, filePath: str):
+    try:
+        return await toReplyDocument.reply_document(filePath)
+    except FloodWait as e:
+        await asyncio.sleep(e.x)
+        LOGGER.info(str(e))
+        await sendDocument(toReplyDocument)
     except Exception as e:
         LOGGER.info(str(e))

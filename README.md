@@ -14,6 +14,7 @@ Thus, it is not clear that you sent the message.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HuzunluArtemis/AnonymousMessageForwarderBot)
 
+
 ## Setting up config file
 <details>
     <summary><b>Click Here For Details</b></summary><br>
@@ -26,6 +27,7 @@ Thus, it is not clear that you sent the message.
 - `OWNER_ID`: Type `/id` to @MissRose_bot to get this value. Example: `2323423423`
 - `AUTH_IDS`: Id's of bot users, seperate with blank. Leave it empty for public. Example: `2323423423 325345`
 - `BOT_USERNAME`: Bot's username. Example: `@AnonimSenderBot`
+- `SEND_AS_REPLY`: Send copy message as reply to your message. Example: `1` or `0`
 
 </details>
 
