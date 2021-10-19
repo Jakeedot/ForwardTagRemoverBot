@@ -34,7 +34,7 @@ async def helps(client, message: Message):
 	f"\nYou send the message I sent."+ \
 	f"\nThus, it is not clear that you sent the message."+ \
 	f"\nWhat are you waiting for? Write something to me and try it!"
-	if Config.UPDATES_CHANNEL is not None and Config.UPDATES_CHANNEL is not "" and Config.UPDATES_CHANNEL is not " ":
+	if Config.UPDATES_CHANNEL != None and Config.UPDATES_CHANNEL != "" and Config.UPDATES_CHANNEL != " ":
 		reply_markup=InlineKeyboardMarkup(
 			[
 				[InlineKeyboardButton(
