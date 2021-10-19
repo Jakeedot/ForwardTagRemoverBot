@@ -19,6 +19,18 @@
         "BOT_TOKEN": {
             "description": "Telegram bot token. From BotFather",
             "value": ""
+        },
+        "BOT_USERNAME": {
+            "description": "Read readme",
+            "value": ""
+        },
+        "AUTH_IDS": {
+            "description": "Read readme",
+            "value": "0"
+        },
+        "OWNER_ID": {
+            "description": "Read readme",
+            "value": "0"
         }
     },
     "addons": [

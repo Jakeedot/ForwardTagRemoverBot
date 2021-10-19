@@ -22,6 +22,10 @@ Thus, it is not clear that you sent the message.
 - `APP_ID`: Telegram App ID. Example: `32523453`
 - `API_HASH`: Telegram Api Hash. Example: `asdasdas6d265asd26asd6as1das`
 - `UPDATES_CHANNEL`: Your updates channel or contact bot username. Example: `HuzunluArtemis`
+- `FORCE_SUBSCRIBE_CHANNEL`: Force-subscribe channel. Example: `HuzunluArtemis`
+- `OWNER_ID`: Type `/id` to @MissRose_bot to get this value. Example: `2323423423`
+- `AUTH_IDS`: Id's of bot users, seperate with blank. Leave it empty for public. Example: `2323423423 325345`
+- `BOT_USERNAME`: Bot's username. Example: `@AnonimSenderBot`
 
 </details>
 
