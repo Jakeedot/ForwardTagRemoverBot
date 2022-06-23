@@ -1,5 +1,6 @@
 # HuzunluArtemis
 
+from translation import Translation
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types.bots_and_keyboards.inline_keyboard_markup import InlineKeyboardMarkup
