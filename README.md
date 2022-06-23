@@ -1,18 +1,14 @@
-# AnonymousMessageForwarderBot - Anonymous Forwarder
+# AnonymousForwarderBot - Telegram bot
 
-## AnonymousMessageForwarderBot:
+## AnonymousForwarderBot:
 
-🇹🇷 Ben basit bir yönlendirici botuyum.
-Gönderdiğiniz her mesajı anonimleştiririm.
-Benim göndereceğim mesajı gönderirsiniz.
-Böylece mesajı sizin gönderdiğiniz belli olmaz.
 
-🇬🇧 This a simple forwarder bot.
+This a simple forwarder bot.
 I anonymize every message you send
 You send the message I sent.
 Thus, it is not clear that you sent the message.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HuzunluArtemis/AnonymousMessageForwarderBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jakeedot/AnonymousForwarderBot)
 
 
 ## Setting up config file
